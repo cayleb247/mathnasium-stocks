@@ -1,0 +1,13 @@
+import styles from './StockProfile.module.css'
+
+export default function StockProfile() {
+    return (
+        <div className={styles.headerContainer}>
+            <div className={styles.logoContainer}>
+                <h3>Mathnasium</h3>
+                <h3>|</h3>
+                <h3>Stocks</h3>
+            </div>
+        </div>
+    );
+}

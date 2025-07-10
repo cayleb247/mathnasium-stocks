@@ -1,7 +1,13 @@
 .homeContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
+}
+
+.imageContainer {
+  background-color: black;
+  height: 100%;
+  width: 50%;
+  position: relative;
 }
