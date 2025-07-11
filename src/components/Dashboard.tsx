@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import styles from "./Dashboard.module.css";
+import StockProfile from "./StockProfile";
 
 export default function Dashboard() {
   useEffect(() => {
@@ -13,7 +14,6 @@ export default function Dashboard() {
       if (!response.ok) {
         throw new Error();
       } else {
-        
         console.log(response.json());
         // return response.json();
       }
@@ -21,7 +21,13 @@ export default function Dashboard() {
   }, []);
   return (
     <div className={styles.dashboardContainer}>
-      <h1>h1</h1>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
+      <StockProfile></StockProfile>
     </div>
   );
 }
