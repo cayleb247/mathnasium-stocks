@@ -2,7 +2,7 @@ import styles from './Login.module.css'
 
 export default function Login() {
     return (
-        <div className={styles.loginContainer}>
+        <div className={styles.formContainer}>
             <h1>Log In</h1>
             <form action="">
                 <label htmlFor="Username">Username</label>
