@@ -3,8 +3,8 @@ import { relations } from "drizzle-orm"
 
 export const users = pgTable('users', {
     id: serial("id").primaryKey(),
-    userName: varchar("user_name").notNull(),
-    email: varchar().notNull().unique(),
+    username: varchar().notNull().unique(),
+    password: varchar().notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow()
     .$onUpdate(() => new Date())

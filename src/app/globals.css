@@ -10,6 +10,10 @@ body {
   background-color: #363636;
 }
 
-h1, h2, h3, p, input, button, label {
+h1, h2, h3, p, input, button, label, li {
   font-family: "Lato", sans-serif;
+}
+
+ul {
+ list-style: none;
 }
