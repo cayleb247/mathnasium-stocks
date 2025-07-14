@@ -1,3 +1,5 @@
+'use server';
+
 import { SignupFormSchema, FormState } from "@/lib/definitions";
 import * as argon2 from "argon2";
 import "dotenv/config";
@@ -8,7 +10,7 @@ const db = drizzle(process.env.DATABASE_URL!);
 
 export async function signup(state: FormState, formData: FormData) {
   // Validate form fields
-  const validatedFields = SignupFormSchema.safeParse({
+  const validatedFields = await SignupFormSchema.safeParseAsync({
     username: formData.get("username"),
     password: formData.get("password"),
     confirmPassword: formData.get("confirmPw"),
