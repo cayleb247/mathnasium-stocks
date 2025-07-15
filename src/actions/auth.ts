@@ -5,6 +5,8 @@ import * as argon2 from "argon2";
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/neon-http";
 import { users } from "@/db/schema";
+import { createSession, deleteSession } from '@/lib/session'
+import { redirect } from 'next/navigation'
 
 const db = drizzle(process.env.DATABASE_URL!);
 
@@ -19,6 +21,7 @@ export async function signup(state: FormState, formData: FormData) {
   // If any form fields are invalid, return early
   if (!validatedFields.success) {
     return {
+      username: formData.get("username"),
       errors: validatedFields.error.flatten().fieldErrors,
     };
   }
@@ -43,4 +46,13 @@ export async function signup(state: FormState, formData: FormData) {
 
   await db.insert(users).values(user);
   console.log("New user created!");
+
+  await createSession(user.id!)
+  // 5. Redirect user
+  redirect('/')
+}
+
+export async function logout() {
+    await deleteSession();
+    redirect('/login');
 }

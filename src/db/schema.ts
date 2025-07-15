@@ -2,7 +2,7 @@ import { pgTable, serial, varchar, timestamp, integer } from "drizzle-orm/pg-cor
 import { relations } from "drizzle-orm"
 
 export const users = pgTable('users', {
-    id: serial("id").primaryKey(),
+    id: serial("id").notNull().primaryKey(),
     username: varchar().notNull().unique(),
     password: varchar().notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
@@ -11,7 +11,7 @@ export const users = pgTable('users', {
 })
 
 export const stocks = pgTable('stocks', {
-    id: serial("id").primaryKey(),
+    id: serial("id").notNull().primaryKey(),
     usersId: integer("users_id").notNull().references(() => 
     users.id),
     name: varchar().notNull(),
