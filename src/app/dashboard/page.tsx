@@ -1,9 +1,9 @@
-import styles from "./stocks.module.css";
-import Dashboard from "@/components/Dashboard";
+import styles from "./dashboard.module.css";
+import StockList from "@/components/StockList";
 import { verifySession } from "@/lib/dal";
 import { redirect } from "next/navigation";
 
-export default async function Stocks() {
+export default async function Dashboard() {
   const session = await verifySession();
 
   if (session) {
@@ -15,7 +15,7 @@ export default async function Stocks() {
             <input type="text" placeholder="Search for stocks" />
           </form>
         </div>
-        <Dashboard></Dashboard>
+        <StockList></StockList>
       </div>
     );
   } else {

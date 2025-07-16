@@ -78,7 +78,7 @@ export async function login(state: FormState, formData: FormData) {
 
   if (await argon2.verify(user.password, password)) {
     await createSession(user.id!);
-    redirect("/stocks");
+    redirect("/dashboard");
   } else {
     return {
       username: username,

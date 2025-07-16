@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function StockProfile({ stock_id }: { stock_id: string }) {
+
+
   return (
     <Link href={`/stocks/${stock_id}`} style={{textDecoration: "none"}}>
       <div className={styles.stockProfileContainer}>

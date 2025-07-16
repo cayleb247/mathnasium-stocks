@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
 import { useEffect } from "react";
-import styles from "./Dashboard.module.css";
+import styles from "./StockList.module.css";
 import StockProfile from "./StockProfile";
 
-export default function Dashboard() {
+export default function StockList() {
   useEffect(() => {
-    console.log("hi");
+    console.log("bye");
     fetch(
       `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=LMDSDA6NI3X20MK4`,
       { mode: "cors" }
