@@ -3,6 +3,7 @@
 import styles from "./Header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { logout } from "@/actions/auth";
 
 export default function Header() {
   const pathname = usePathname();
@@ -24,7 +25,7 @@ export default function Header() {
           <h3 className={styles.headerButton}>Log In</h3>
         </Link>
       ) : (
-        <h3 className={styles.headerButton}>Log Out</h3>
+        <h3 className={styles.headerButton} onClick={logout}>Log Out</h3>
       )}
     </div>
   );

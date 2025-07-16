@@ -10,7 +10,7 @@ async function userExists(username : string) {
     const result = await db.select().from(users).where(eq(users.username, username))
     if (result.length > 0) {
         return true;
-    } else {
+    } else if (result.length == 0) {
         return false;
     }
 }
@@ -37,7 +37,9 @@ export const SignupFormSchema = z
     message: "Passwords do not match",
     path: ["confirmPassword"],
   })
-  .refine((data) => !userExists(data.username), {
+  .refine( async (data) => {
+    return !(await userExists(data.username))
+  }, {
     message: "Username has been taken",
     path: ["username"],
   })
