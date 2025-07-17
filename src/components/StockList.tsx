@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import styles from "./StockList.module.css";
-import StockProfile from "./StockProfile";
+// import StockProfile from "./StockProfile";
 
 export default function StockList() {
   useEffect(() => {
@@ -20,13 +20,13 @@ export default function StockList() {
   }, []);
   return (
     <div className={styles.dashboardContainer}>
+      {/* <StockProfile></StockProfile>
       <StockProfile></StockProfile>
       <StockProfile></StockProfile>
       <StockProfile></StockProfile>
       <StockProfile></StockProfile>
       <StockProfile></StockProfile>
-      <StockProfile></StockProfile>
-      <StockProfile></StockProfile>
+      <StockProfile></StockProfile> */}
     </div>
   );
 }
