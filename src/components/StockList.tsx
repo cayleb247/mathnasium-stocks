@@ -6,7 +6,6 @@ import StockProfile from "./StockProfile";
 
 export default function StockList() {
   useEffect(() => {
-    console.log("bye");
     fetch(
       `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=LMDSDA6NI3X20MK4`,
       { mode: "cors" }
