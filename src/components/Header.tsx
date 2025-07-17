@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <div className={styles.headerContainer}>
-      <Link href="/stocks" style={{ textDecoration: "none" }}>
+      <Link href="/dashboard" style={{ textDecoration: "none" }}>
         <div className={styles.logoContainer}>
           <h3>Mathnasium</h3>
           <h3>|</h3>
