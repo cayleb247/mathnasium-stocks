@@ -1,8 +1,6 @@
 "use client";
 
 import styles from "./stock.module.css";
-import StockList from "@/components/StockList";
-import CreateStockDialog from "@/components/CreateStockDialog";
 import { useState, useEffect, use } from "react";
 import { redirect } from "next/navigation";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import styles from "./CreateStockDialog.module.css";
 
 interface CreateRoomDialogProps {
@@ -10,8 +10,8 @@ interface CreateRoomDialogProps {
 }
 
 export default function CreateRoomDialog(props: CreateRoomDialogProps) {
-  const [stockNameTaken, setStockNameTaken] = useState(false);
-  const [invalidStockSym, setInvalidStockSym] = useState(false);
+//   const [stockNameTaken, setStockNameTaken] = useState(false);
+//   const [invalidStockSym, setInvalidStockSym] = useState(false);
 
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -66,9 +66,9 @@ export default function CreateRoomDialog(props: CreateRoomDialogProps) {
             id="stockName"
             placeholder="stock name"
           />
-          {stockNameTaken && (
+          {/* {stockNameTaken && (
             <p style={{ color: "red" }}>stock name already used</p>
-          )}
+          )} */}
           <label htmlFor="roomName">Stock Symbol</label>
           <input
             type="text"
@@ -76,9 +76,9 @@ export default function CreateRoomDialog(props: CreateRoomDialogProps) {
             id="stockSym"
             placeholder="stock symbol"
           />
-          {invalidStockSym && (
+          {/* {invalidStockSym && (
             <p style={{ color: "red" }}>stock symbol does not exist</p>
-          )}
+          )} */}
         </div>
 
         <div className={styles.buttonsContainer}>
