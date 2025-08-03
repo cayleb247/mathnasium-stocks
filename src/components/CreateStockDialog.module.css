@@ -1,0 +1,83 @@
+.dialogContainer {
+    background-color: rgb(24, 24, 24);
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+}
+
+.dialogContainer::backdrop {
+    background-color: rgba(0, 0, 0, 0.305);
+}
+
+.dialogContainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dialogContainer form input {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(152, 152, 152);
+    background-color: transparent;
+    color: white;
+}
+
+.dialogContainer form input:focus {
+    outline: none;
+
+}
+
+.dialogContainer form button {
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: #FF3E3E;
+  color: white;
+}
+
+.dialogContainer form button:hover {
+  background-color: #bc2d2d;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.closeButton {
+    font-size: 0.75rem;
+    color: rgb(136, 136, 136);
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    text-decoration: underline;
+}
+
+.privacyContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
