@@ -1,7 +1,7 @@
 // app/api/tiingo/route.ts
 import { NextResponse } from "next/server";
 
-const API_KEYS = ["21b3968a8992398510554c085af7f87af7623f1b", "bc59a8acb6c5000916720c08e433faef896b42ee", "8f9f9469af19d72fea545703bd7fc1fdbf495da0"]
+const API_KEYS = ["21b3968a8992398510554c085af7f87af7623f1b", "bc59a8acb6c5000916720c08e433faef896b42ee", "8f9f9469af19d72fea545703bd7fc1fdbf495da0", "e85bf4e01d9eaa3267fdd3ed375d747d7e1fd0f9"]
 
 export async function POST(request: Request) {
   const body = await request.json();
