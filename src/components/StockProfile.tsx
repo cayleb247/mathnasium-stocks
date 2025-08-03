@@ -53,7 +53,7 @@ export default function StockProfile(props: StockProfileProps) {
 
   return (
     <Link
-      href={`/dashboard/${props.stock}`}
+      href={`/dashboard/${props.name}`}
       style={{ textDecoration: "none" }}
       className={styles.stockProfileContainer}
     >
