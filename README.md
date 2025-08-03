@@ -9,7 +9,7 @@ I work part time at a local Mathnasium learning center and wanted to create a wa
 1. Create an account
 2. Log into your account.
 3. In your dashboard page, select "+ Add Stock".
-4. Give your stock a name and then input a stock ticker for your stock.
+4. Give your stock a name and then input a stock ticker for your stock. (Must be a valid ticker for stock data to work)
 5. Observe your real-time data.
 
 Note: Work in progress - multiple features do not work yet, including stock search bar and stock profiles.
